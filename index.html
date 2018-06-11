@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<!-- htmlexp1.html -->
+<title>Breathe freely (?)</title>
+<style type="text/css">
+	
+	body { 
+  font-family: sans;
+  background-image: url("mapimage.png");
+  
+ 
+}
+
+div.f71block {
+  text-align: center;
+   margin: 0 auto; 
+   width:40%;  
+}
+
+div.f85block {
+  text-align: center;
+   margin: 0 auto; 
+   
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-family: helvetica;
+  text-shadow: 2px 3px 0px #33CCCC;
+  font-size: 240%;
+}
+
+a:link {
+color: #33CCCC;
+}
+a:visited {
+color: #33CCCC;
+}
+a:hover {
+color: yellow;
+}
+
+
+h2 {
+  text-align: center;
+  color: #33CCCC;
+  font-family: helvetica;
+  font-size: 80%;
+}
+div.header{
+  background-color:#333333;
+  opacity:0.8;
+   filter: alpha(opacity=80);
+  width:45%;
+  margin-left:auto;
+  margin-right:auto;
+
+
+}
+
+.checkboxgroup {
+  display: inline-block;
+  text-align: center;
+}
+.checkboxgroup label {
+  display: block;
+}
+
+div.transbox{
+   background-color: #333333;
+   opacity: 0.95;
+   filter: alpha(opacity=80);
+   font-family: helvetica;
+   width: 98%;
+   height: 55%;
+   margin-left:auto;
+   margin-right:auto;
+
+
+}
+
+div.transbox p {
+  margin: 3%;
+  color: white;
+}
+
+
+
+p{
+	color: white;
+	font-family: helvetica;
+}
+#left {
+border: 3px red solid;
+background-color:#333333;
+opacity:0.8;
+
+}
+#right {
+border: 3px blue solid;
+
+
+}
+
+.row { display: flex; margin: 1em 0; align-items: center }
+
+.row button, .row input[type=range] { flex-grow: 1; margin: .2em; height: 3em}
+
+
+.row2 {
+	display: flex; align-items: left;
+}
+.col {
+  flex: 1; /* additionally, equal width */
+  
+  padding: 1em;
+
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+<div class="header">
+  <h1>breathe freely (?)</h1>
+  <h2>Britta F. Schulte, Zuzanna Lechelt, Aneesha Singh: UCL Interaction Centre</h2><br>
+</div>
+<br>
+
+<div class="row2">
+  <div class="col" style="text-align:center;">
+    <div class="transbox">
+
+      <div style="text-align: center;  margin:3%;"><br>
+        <span style="background-color:#33CCCC; font-size:17pt;">
+          <b>what does the mask think?</b>
+        </span> 
+      </div>
+
+	  <video id="myVideo" autoplay width="80%" height="80%" >
+	    <source id="mp4_src" src="mask_open_1.mp4" type="video/mp4">
+	  </video>
+	  <h2 id="log"></h2>
+	  
+	 
+</div>
+
+</div>
+
+
+
+	  <div class="col" style="text-align: center">
+	  <div class="transbox" >
+<div style="text-align: center;  margin:3%;"><br>
+  <span style="background-color:#33CCCC; font-size:17pt;">
+<b>about the daily air quality index</b></span> 
+   </div>
+  
+
+
+		<p>
+			The forecasts, latest data and summaries on UK-AIR use the “Daily Air Quality Index”.
+			This is a way of describing outdoor air pollution levels in a clear and simple way, similar to
+			a pollen index or sun index. <br/><br/>
+
+			The Daily Air Quality Index (DAQI) covers the five pollutants that are most likely to affect
+			health on a day-to-day basis: 
+			1) Ozone 2) Nitrogen dioxide (NO2) 3) Sulphur dioxide (SO2) 
+			4) Particulate matter (as PM10) <br> and 5) Fine particulate matter (as PM2.5).</b> <br/><br/>
+
+			The Daily Air Quality Index uses a scale of 1 to 10 to describe air pollution, divided into
+			three bands. <span style="background-color: lightgreen; color: black;"><b>Low air pollution</b></span> is between 1 and 3, <span style="background-color: yellow; color: black;"><b>Moderate</b></span> is between 4 and 6, <span style="background-color: red; color: black;"><b>High</b></span> is
+			between 7 and 9, and <span style="background-color:#B22222; color: black;"><b> Very High</b></span> is 10 on the scale. The scale is as follows:<br>
+		</p>
+		 <div class="row">
+
+	    <div class="f85block">
+          <div class="checkboxgroup">
+		    <input type="radio" name="aqiIndex" id="low1" value="1" onclick="myFunction()" />
+		    <label for="low1"><span style="background-color: #00FF00">&nbsp;&nbsp;1&nbsp;&nbsp;</span></label>
+		  </div>	 
+		   <div class="checkboxgroup">
+		    <input type="radio" name="aqiIndex" id="low2" value="2" onclick="myFunction()" />
+		    <label for="low2"><span style="background-color: #90FF00">&nbsp;&nbsp;2&nbsp;&nbsp;</span></label>
+		   </div>
+		  <div class="checkboxgroup">
+		    <input type="radio" name="aqiIndex" id="low3" value="3" onclick="myFunction()" />
+		    <label for="low3"><span style="background-color: #E0FF00">&nbsp;&nbsp;3&nbsp;&nbsp;</span></label>
+		  </div>
+           <div class="aCenter bold"><span style="color: white;">Low</span></div>
+         
+         </div>
+
+
+      <div class="f85block">
+		<div class="checkboxgroup">
+		  <input type="radio" name="aqiIndex" id="medium4" value="4"  onclick="changeSource2()"/>
+		  <label for="medium4"><span style="background-color: #FFE000">&nbsp;&nbsp;4&nbsp;&nbsp;</span></label>
+		</div>
+		<div class="checkboxgroup">
+		  <input type="radio" name="aqiIndex" id="medium5" value="5"  onclick="changeSource2()"/>
+		  <label for="medium5"><span style="background-color: #FFB000">&nbsp;&nbsp;5&nbsp;&nbsp;</span></label>
+		</div>
+		<div class="checkboxgroup">
+		  <input type="radio" name="aqiIndex" id="medium6" value="6"  onclick="changeSource2()"/>
+		  <label for="medium6"><span style="background-color: #FF8000">&nbsp;&nbsp;6&nbsp;&nbsp;</span></label>
+		</div>
+
+		 <div class="aCenter bold"><span style="color: white;">Moderate</span></div>
+	  </div>
+
+
+      <div class="f85block">
+	    <div class="checkboxgroup">
+		  <input type="radio" name="aqiIndex" id="medium7" value="7"  onclick="changeSource3()"/>
+		  <label for="medium7"><span style="background-color: #FF5000">&nbsp;&nbsp;7&nbsp;&nbsp;</span></label>
+		</div>
+
+		<div class="checkboxgroup">
+		  <input type="radio" name="aqiIndex" id="high8" value="8"  onclick="changeSource3()"/>
+		  <label for="high8"><span style="background-color: #FF3000">&nbsp;&nbsp;8&nbsp;&nbsp;</span></label>
+		</div>
+
+		<div class="checkboxgroup">
+		  <input type="radio" name="aqiIndex" id="high9" value="9"  onclick="changeSource3()"/>
+		  <label for="high9"><span style="background-color: #FF0000">&nbsp;&nbsp;9&nbsp;&nbsp;</span></label>
+		</div>
+
+		<div class="aCenter bold"><span style="color: white;">High</span></div>
+	  </div>
+
+    <div class="f85block">
+		<div class="checkboxgroup">
+		  <input type="radio" name="aqiIndex" id="high10" value="10"  onclick="changeSource4()"/>
+		  <label for="high10"><span style="background-color: #B22222">&nbsp;&nbsp;10&nbsp;&nbsp;</span></label>
+		</div>
+	  <div class="aCenter bold"><span style="color: white;">Very High</span></div>
+    </div>
+
+
+</div>
+
+<p><br><br>Interested in learning more? Check out our project blog here:<br><a href="https://pollutionmaskproject.wordpress.com/">https://pollutionmaskproject.wordpress.com/</a><br><br>
+<img src="qrcode.png" alt="QR Code to our blog" height="15%" width="15%"></p>
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+
+   var vid = document.getElementById("myVideo");
+  
+   var sourceType=1;
+
+
+   function myFunction() { 
+   	if (sourceType == 2) {
+      vid.src = "mask_close_1.mp4";	
+      vid.load();
+      sourceType=1;
+
+   }
+
+    document.getElementById("log").innerHTML = "<span style='color: #00ff00;'>Air Pollution Low: Mask Off</span>";
+
+	}
+
+
+	function changeSource2() {
+
+	if (sourceType==1) {
+
+	  vid.src = "mask_open_1.mp4";
+	  vid.load();
+	  sourceType=2;
+	}
+
+	  document.getElementById("log").innerHTML = "<span style='color: #FFE000;'>Air Pollution Moderate: Mask On</span>";
+
+	}
+
+	function changeSource3() {
+
+    if (sourceType==1) {
+
+	  vid.src = "mask_open_1.mp4";
+	  vid.load();
+	  sourceType=2;
+
+	}
+	  document.getElementById("log").innerHTML = "<span style='color: #FF5000;'>Air Pollution High: Mask On. You may want to leave the area.</span>";
+
+	}
+
+	function changeSource4() {
+	if (sourceType==1) {
+
+	  vid.src = "mask_open_1.mp4";
+	  vid.load();
+	  sourceType=2;
+	}
+	  document.getElementById("log").innerHTML = "<span style='color: #B22222;'>Air Pollution Very High: Mask On. LEAVE THE AREA NOW</span>";
+
+	}
+
+
+
+
+</script>
+
+
+</body>
+
+
+</html>
